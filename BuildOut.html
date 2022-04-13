@@ -61,7 +61,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <div class="w3-row w3-padding-32">
     <div class="w3-center w3-border w3-margin w3-container">
       <h1 class="w3-text-blue">Build Out</h1>
-      <p class="w3-large">Build out Stations, Apparatus, Equipment and Store Rooms</p>
+      <p class="w3-large">Build Out Stations, Apparatus, Equipment and Store Rooms</p>
     </div>
   </div>
 
@@ -69,39 +69,96 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     <button class="w3-button w3-green w3-padding-16">Station Build Out</button>
     <button class="w3-button w3-red w3-padding-16">Apparatus Build Out</button>
     <button class="w3-button w3-blue w3-padding-16">Equipment Build Out</button>
+    <button class="w3-button w3-orange w3-padding-16">Store Room Build Out</button>
   </div>
 
-  <div class="w3-row-padding w3-center w3-padding-16" id="BuildOutLists">
-    <div class="w3-third w3-margin-bottom w3-cell">
+  <!--Top Row Build out-->
+  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
+    <div class="w3-half w3-margin-bottom w3-cell">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-green">
           <p class="w3-xlarge">Stations</p>
+           <input class="w3-input" type="text" placeholder="Search">
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 1<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 2<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 3<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
+        </li>
+
         <li class="w3-light-gray w3-padding-16">
           <button class="w3-button w3-green w3-padding-large">Update</button>
         </li>
       </ul>
     </div>
   
-    <div class="w3-third w3-margin-bottom w3-cell">
+    <div class="w3-half w3-margin-bottom w3-cell">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-red">
           <p class="w3-xlarge">Apparatus</p>
+          <input class="w3-input" type="text" placeholder="Search">
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Engine 1<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Engine 2<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
+        </li>
+
         <li class="w3-light-gray w3-padding-16">
           <button class="w3-button w3-green w3-padding-large">Update</button>
         </li>
       </ul>
     </div>
-  
-    <div class="w3-third w3-margin-bottom w3-cell">
+  </div>
+
+<!--Bottom Row Build Out-->
+  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
+    <div class="w3-half w3-margin-bottom w3-cell">
       <ul class="w3-ul w3-border w3-hover-shadow">
         <li class="w3-blue">
           <p class="w3-xlarge">Equipment</p>
+          <input class="w3-input" type="text" placeholder="Search">
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Flash Lights<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
         </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Cordless Drill<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
+        </li>
+  
+        <li class="w3-light-gray w3-padding-16">
+          <button class="w3-button w3-green w3-padding-large">Update</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half w3-margin-bottom w3-cell">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-orange">
+          <p class="w3-xlarge">Store Rooms</p>
+          <input class="w3-input" type="text" placeholder="Search">
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 1 West Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 2 East Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+        </li>
+  
         <li class="w3-light-gray w3-padding-16">
           <button class="w3-button w3-green w3-padding-large">Update</button>
         </li>
