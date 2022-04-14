@@ -65,8 +65,83 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     </div>
   </div>
 
+  <!--Station Modal-->
+  <div id="StationModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-green"> 
+        <span onclick="document.getElementById('StationModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Station Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Station Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Station Location</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>No. Of Bays</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Dated Built</b></label>
+        <input class="w3-input w3-border" type="date">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Station Photo Upload: </b></label><br>
+          <input class="w3-button" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-green w3-padding-large">Save</button>
+        <button class="w3-button w3-green w3-padding-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+  <!--Apparatus Modal-->
+  <div id="ApparatusModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-green"> 
+        <span onclick="document.getElementById('ApparatusModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Apparatus Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Station Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Station Location</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>No. Of Bays</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Dated Built</b></label>
+        <input class="w3-input w3-border" type="date">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Apparatus Photo Upload: </b></label><br>
+          <input class="w3-button" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-green w3-padding-large">Save</button>
+        <button class="w3-button w3-green w3-padding-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+
   <div class="w3-container w3-center w3-padding-24">
-    <button class="w3-button w3-green w3-padding-16">Station Build Out</button>
+    <button onclick="document.getElementById('StationModal').style.display='block'" class="w3-button w3-green w3-padding-16">Station Build Out</button>
     <button class="w3-button w3-red w3-padding-16">Apparatus Build Out</button>
     <button class="w3-button w3-blue w3-padding-16">Equipment Build Out</button>
     <button class="w3-button w3-orange w3-padding-16">Store Room Build Out</button>
