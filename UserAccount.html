@@ -37,10 +37,48 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </a>
   <h2 class="w3-padding-top"></h2>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Welcome.html">Welcome Center</a>
-  <a class="w3-bar-item w3-button w3-hover-blue" href="BuildOut.html">Build Out</a>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="StationDropDown()">
+      Stations<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Station" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Stations.html" class="w3-bar-item w3-button">View Stations</a>
+      <a href="Stations_Build.html" class="w3-bar-item w3-button">Station Build Out</a>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="ApparatusDropDown()">
+      Apparatus<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Apparatus" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Apparatus.html" class="w3-bar-item w3-button">View Apparatus</a>
+      <a href="Apparatus_Build.html" class="w3-bar-item w3-button">Apparatus Build Out</a>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="EquipmentDropDown()">
+      Equipment<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Equipment" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Equipment.html" class="w3-bar-item w3-button">View Equipment</a>
+      <a href="Equipment_build.html" class="w3-bar-item w3-button">Equipment Build Out</a>
+    </div>
+  </div>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="StoreRoomDropDown()">
+      Store Rooms<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="StoreRoom" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="StoreRooms.html" class="w3-bar-item w3-button">View Store Rooms</a>
+      <a href="StoreRooms_Build.html" class="w3-bar-item w3-button">Store Room Build Out</a>
+    </div>
+  </div>
+
   <a class="w3-bar-item w3-button w3-hover-blue" href="Checks.html">Checks</a>
-  <a class="w3-bar-item w3-button w3-hover-blue" href="StoreRooms.html">Store Room</a>
-  <a class="w3-bar-item w3-button w3-hover-blue" href="Stations.html">Stations</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Scheduling.html">Scheduling</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Reports.html">Reports</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Evaluations.html">Evaluations</a>
@@ -49,7 +87,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <a class="w3-bar-item w3-button w3-hover-blue" href="Users.html">Users</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Premissions.html">User Premissions</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Help.html">Help</a>
-  <a class="w3-bar-item w3-hide-large w3-button w3-hover-blue w3-red" href="UserAccount.html">User Account</a>
+  <a class="w3-bar-item w3-hide-large w3-button w3-hover-blue w3-green w3-red" href="UserAccount.html">User Account</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
@@ -135,6 +173,54 @@ function w3_open() {
 function w3_close() {
   mySidebar.style.display = "none";
   overlayBg.style.display = "none";
+}
+
+function StationDropDown() {
+  var x = document.getElementById("Station");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function ApparatusDropDown() {
+  var x = document.getElementById("Apparatus");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function EquipmentDropDown() {
+  var x = document.getElementById("Equipment");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function StoreRoomDropDown() {
+  var x = document.getElementById("StoreRoom");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
 }
 </script>
 
