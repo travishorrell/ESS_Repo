@@ -69,12 +69,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </div>
 
   <div class="w3-dropdown-click">
-    <button class="w3-hover-blue w3-button" onclick="StoreRoomDropDown()">
+    <button class="w3-hover-blue w3-red w3-button" onclick="StoreRoomDropDown()">
       Store Rooms<i class="fa fa-caret-down"></i>
     </button>
     <div id="StoreRoom" class="w3-dropdown-content w3-bar-block w3-white w3-card">
       <a href="StoreRooms.html" class="w3-bar-item w3-button">View Store Rooms</a>
-      <a href="StoreRooms_Build.html" class="w3-bar-item w3-button">Store Room Build Out</a>
+      <a href="StoreRooms_Build.html" class="w3-bar-item w3-red w3-button">Store Room Build Out</a>
     </div>
   </div>
 
@@ -98,149 +98,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-32">
     <div class="w3-center w3-border w3-margin w3-container">
-      <h1 class="w3-text-blue">Build Out</h1>
-      <p class="w3-large">Build Out Stations, Apparatus, Equipment and Store Rooms</p>
-    </div>
-  </div>
-
-  <!--Station Modal-->
-  <div id="StationModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-green"> 
-        <span onclick="document.getElementById('StationModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Station Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Station Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Station Location</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>No. Of Bays</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Dated Built</b></label>
-        <input class="w3-input w3-border" type="date">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Station Photo Upload: </b></label><br>
-          <input class="w3-button" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
-    </div>
-  </div>
-
-  <!--Apparatus Modal-->
-  <div id="ApparatusModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-red">
-        <span onclick="document.getElementById('ApparatusModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Apparatus Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Apparatus Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Assigned Station</b></label>
-        <select class="w3-select w3-border" name="" id="" name="stationOption">
-          <option value="Station1">Station 1</option>
-          <option value="Station2">Station 2</option>
-          <option value="Station3">Station 3</option>
-        </select>
-
-        <label><b>VIN Number</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Make</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Model</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Year</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Purchase Date</b></label>
-        <input class="w3-input w3-border" type="date">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Apparatus Photo Upload: </b></label><br>
-          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
-    </div>
-  </div>
-
-  <!--Equipment Modal-->
-  <div id="EquipmentModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-blue">
-        <span onclick="document.getElementById('EquipmentModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Equipment Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Equipment Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Assigned Store Room</b></label>
-        <select class="w3-select w3-border" name="" id="" name="stationOption">
-          <option value="Station1">Station 1</option>
-          <option value="Station2">Station 2</option>
-          <option value="Station3">Station 3</option>
-        </select>
-
-        <label><b>Assigned Apparatus</b></label>
-        <select class="w3-select w3-border" name="" id="" name="stationOption">
-          <option value="Station1">Station 1</option>
-          <option value="Station2">Station 2</option>
-          <option value="Station3">Station 3</option>
-        </select>
-
-        <label><b>Make</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Model</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Purchase Date</b></label>
-        <input class="w3-input w3-border" type="date">
-
-        <label><b>QR Code</b></label>
-        <input class="w3-input w3-border" type="text">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Apparatus Photo Upload: </b></label><br>
-          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
+      <h1 class="w3-text-blue">Store Room Build Out</h1>
     </div>
   </div>
 
@@ -284,106 +142,32 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
 
   <div class="w3-container w3-center w3-padding-24">
-    <button onclick="document.getElementById('StationModal').style.display='block'" class="w3-button w3-green w3-padding-16">Station Build Out</button>
-    <button onclick="document.getElementById('ApparatusModal').style.display='block'" class="w3-button w3-red w3-padding-16">Apparatus Build Out</button>
-    <button onclick="document.getElementById('EquipmentModal').style.display='block'" class="w3-button w3-blue w3-padding-16">Equipment Build Out</button>
-    <button onclick="document.getElementById('StoreroomModal').style.display='block'" class="w3-button w3-orange w3-padding-16">Store Room Build Out</button>
+    <button onclick="document.getElementById('StoreroomModal').style.display='block'" class="w3-button w3-green w3-padding-16">Store Room Build Out</button>
   </div>
 
-  <!--Top Row Build out-->
-  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
-    <div class="w3-half w3-margin-bottom w3-cell">
+    <!--Top Row Build out-->
+  <div class="w3-row-padding w3-margin" id="BuildOutLists">
+    <div class="w3-margin-bottom">
       <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-green">
-          <p class="w3-xlarge">Stations</p>
-           <input class="w3-input" type="text" placeholder="Search">
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Station 1<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Station 2<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Station 3<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-light-gray w3-padding-16">
-          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
-        </li>
-      </ul>
-    </div>
-  
-    <div class="w3-half w3-margin-bottom w3-cell">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-red">
-          <p class="w3-xlarge">Apparatus</p>
-          <input class="w3-input" type="text" placeholder="Search">
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Engine 1<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Engine 2<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-light-gray w3-padding-16">
-          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-<!--Bottom Row Build Out-->
-  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
-    <div class="w3-half w3-margin-bottom w3-cell">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-blue">
-          <p class="w3-xlarge">Equipment</p>
-          <input class="w3-input" type="text" placeholder="Search">
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Flash Lights<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
-        </li>
-
-        <li class="w3-padding">
-          <h1 class="w3-medium">Cordless Drill<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
-        </li>
-  
-        <li class="w3-light-gray w3-padding-16">
-          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="w3-half w3-margin-bottom w3-cell">
-      <ul class="w3-ul w3-border w3-hover-shadow">
-        <li class="w3-orange">
+        <li class="w3-dark-gray">
           <p class="w3-xlarge">Store Rooms</p>
           <input class="w3-input" type="text" placeholder="Search">
         </li>
 
         <li class="w3-padding">
-          <h1 class="w3-medium">Station 1 West Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+          <h1 class="w3-medium">Station 2 Store room<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
         </li>
 
         <li class="w3-padding">
-          <h1 class="w3-medium">Station 2 East Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+          <h1 class="w3-medium">Station 3 Store room<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
         </li>
-  
+
         <li class="w3-light-gray w3-padding-16">
           <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
         </li>
       </ul>
     </div>
   </div>
-
     <div class="w3-container w3-bottom w3-dark-gray">
       <p>Copyright <span class="fa fa-copyright"></span> Emergency Software Systems | 2022</p>
     </div>
