@@ -38,6 +38,25 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   <h2 class="w3-padding-top"></h2>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Welcome.html">Welcome Center</a>
   <a class="w3-bar-item w3-button w3-hover-blue w3-red" href="BuildOut.html">Build Out</a>
+
+  <div class="w3-dropdown-click">
+    <button class="w3-button" onclick="myDropFunc()">
+      Apparatus<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoDrop" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="#" class="w3-bar-item w3-button">View Apparatus</a>
+      <a href="#" class="w3-bar-item w3-button">Apparatus Build Out</a>
+    </div>
+  </div>
+
+    <button class="w3-button w3-block w3-left-align" onclick="myAccFunc()">
+    Stations<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="demoAcc" class="w3-hide w3-white w3-card">
+      <a href="#" class="w3-bar-item w3-button">View Stations</a>
+      <a href="#" class="w3-bar-item w3-button">Station Build Out</a>
+    </div>
+
   <a class="w3-bar-item w3-button w3-hover-blue" href="Checks.html">Checks</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="StoreRooms.html">Store Room</a>
   <a class="w3-bar-item w3-button w3-hover-blue" href="Stations.html">Stations</a>
@@ -386,6 +405,31 @@ function w3_close() {
   mySidebar.style.display = "none";
   overlayBg.style.display = "none";
 }
+
+function myDropFunc() {
+  var x = document.getElementById("demoDrop");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+
 </script>
 
 </body>
