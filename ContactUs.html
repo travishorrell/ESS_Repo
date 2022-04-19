@@ -1,194 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>ESS | Contact Us</title>
+<title>ESS | Build Out</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-.fa-anchor,.fa-coffee {font-size:200px}
-
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: lightgray;
-  color: white;
-  cursor: pointer;
-  padding: 15px;
-  border-radius: 4px;
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
 }
-
-#myBtn:hover {
-  background-color: #555;
-}
-
 </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card w3-sepia-min w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large w3-hover-white">ESS</a>
-    <a href="Services.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Services / Pricing</a>
-    <a href="AboutUs.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">About Us</a>
-    <a href="ContactUs.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">Contact Us</a>
-    <a href="#" style="float: right;" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-green" onclick="document.getElementById('id01').style.display='block'">Login</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-sepia-min w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="Services.html" class="w3-bar-item w3-button w3-padding-large">Services / Pricing</a>
-    <a href="AboutUs.html" class="w3-bar-item w3-button w3-padding-large">About Us</a>
-    <a href="ContactUs.html" class="w3-bar-item w3-button w3-padding-large">Contact Us</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="document.getElementById('id01').style.display='block'">Login</a>
+  <div class="w3-bar w3-top w3-blue w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="Welcome.html" class="w3-bar-item w3-button w3-hover-light-gray">ESS | Home</a>
+    <a href="UserAccount.html" class="w3-bar-item w3-button w3-hide-small w3-right w3-hide-medium w3-green">User Account</a>
   </div>
 </div>
 
-<!-- Modal for Login-->
-<div id="id01" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-sepia-min w3-red"> 
-        <span onclick="document.getElementById('id01').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2 class="w3-center">Login</h2>
-      </header>
-      <div class="w3-content w3-display-container" style="padding: 12px;">
-      <form action="Welcome.html" class="w3-container w3-card-4 w3-light-grey w3-text-red w3-margin">
-        
-        <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-user"></i></div>
-            <div class="w3-rest">
-            <input class="w3-input w3-border" name="Username" type="text" placeholder="Username">
-            </div>
-        </div>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-light-gray w3-collapse w3-large" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-animate-left w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h2 class="w3-padding-top"></h2>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Welcome.html">Welcome Center</a>
 
-        <div class="w3-row w3-section">
-        <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-lock"></i></div>
-            <div class="w3-rest">
-            <input class="w3-input w3-border" name="password" type="password" placeholder="Password">
-            </div>
-        </div>
-
-        <p class="w3-center">
-        <button class="w3-button w3-section w3-red w3-sepia-min w3-ripple"> Login </button>
-        </p>
-        </form>
-      </div>
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="StationDropDown()">
+      Stations<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Station" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Stations.html" class="w3-bar-item w3-button">View Stations</a>
+      <a href="Stations_Build.html" class="w3-bar-item w3-button">Station Build Out</a>
     </div>
   </div>
 
-<!-- New Header-->
-<header class="w3-display-container w3-content w3-wide" style="max-width:100%" id="home">
-  <img class="w3-image w3-opacity w3-sepia-min" src="images/kKiGIQ.jpg" alt="Fire Fighter" width="100%">
-  <div class="w3-display-middle w3-margin-top w3-center">
-    <h1 class="w3-xxxlarge w3-hide-small w3-text-black"><span class="w3-padding w3-bold w3-white"><b>Emergency</b></span> <span class="w3-text-white" style="text-shadow:2px 2px 0 black"> Software Systems</span></h1>
-    <h2 class="w3-xxlarge w3-hide-small w3-text-white" style="text-shadow:2px 2px 0 black">Contact Us</h2>
-    <h1 class="w3-large w3-hide-large w3-hide-medium w3-text-black"><span class="w3-padding w3-white"><b>ESS</b></span> <span class="w3-text-white w3-medium">Contact Us</span></h1>
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="ApparatusDropDown()">
+      Apparatus<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Apparatus" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Apparatus.html" class="w3-bar-item w3-button">View Apparatus</a>
+      <a href="Apparatus_Build.html" class="w3-bar-item w3-button">Apparatus Build Out</a>
+    </div>
   </div>
-</header>
 
-<!--Top Button-->
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-center w3-padding-64 w3-container">
-  <div class="w3-content">
-      <h1>We would love to hear from you</h1>
-      <h5 class="w3-padding-32">Please submit any questions you might have and we will reach out to you within 24 hours.</h5>
-      <div class="w3-container w3-sepia-min w3-red">
-        <h2>Contact Form</h2>
-      </div>
-      <form>
-        <div class="w3-row w3-section">
-          <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-user"></i></div>
-              <div class="w3-rest">
-              <input class="w3-input w3-border" name="FirstName" type="text" placeholder="First Name">
-              </div>
-          </div>
-
-          <div class="w3-row w3-section">
-            <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-user"></i></div>
-                <div class="w3-rest">
-                <input class="w3-input w3-border" name="LastName" type="text" placeholder="Last Name">
-                </div>
-            </div>
-
-            <div class="w3-row w3-section">
-              <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-envelope"></i></div>
-                  <div class="w3-rest">
-                  <input class="w3-input w3-border" name="Email" type="text" placeholder="Email">
-                  </div>
-              </div>
-
-              <div class="w3-row w3-section">
-                <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-home"></i></div>
-                    <div class="w3-rest">
-                    <input class="w3-input w3-border" name="Organization" type="text" placeholder="Organization">
-                    </div>
-                </div>
-
-                <div class="w3-row w3-section">
-                  <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min fa fa-phone"></i></div>
-                      <div class="w3-rest">
-                      <input class="w3-input w3-border" name="PhoneNumber" type="text" placeholder="Phone Number">
-                      </div>
-                  </div>
-
-                  <div class="w3-row w3-section">
-                    <div class="w3-col" style="width:50px"><i class="w3-xxlarge w3-sepia-min"></i></div>
-                        <div class="w3-rest" style="padding: 10px;">
-                          <input class="w3-check" type="checkbox" name="SaleQuestion" value="Sales Questions" checked>
-                          <label>Sales Questions</label>
-                  
-                          <input style="margin-left: 15px;" class="w3-check" type="checkbox" name="Support Question" value="Support Questions">
-                          <label>Support Questions</label>
-                  
-                          <input style="margin-left: 15px;" class="w3-check" type="checkbox" name="General Software Questions" value="General Software Questions">
-                          <label>General Software Questions</label> 
-                        </div>
-                    </div>
-          <button class="w3-btn w3-sepia-min w3-red" style="margin-top: 20px;">Send</button>
-      </form>
-
-      <div class="w3-content w3-padding-top-64">
-        <h1 class="w3-large">Mailing Address: Idaho Falls, ID 83404</h1>
-      </div>
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="EquipmentDropDown()">
+      Equipment<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="Equipment" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="Equipment.html" class="w3-bar-item w3-button">View Equipment</a>
+      <a href="Equipment_build.html" class="w3-bar-item w3-button">Equipment Build Out</a>
+    </div>
   </div>
-</div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: It is a rough road that leads to the heights of greatness.</h1>
-</div>
+  <div class="w3-dropdown-click">
+    <button class="w3-hover-blue w3-button" onclick="StoreRoomDropDown()">
+      Store Rooms<i class="fa fa-caret-down"></i>
+    </button>
+    <div id="StoreRoom" class="w3-dropdown-content w3-bar-block w3-white w3-card">
+      <a href="StoreRooms.html" class="w3-bar-item w3-button">View Store Rooms</a>
+      <a href="StoreRooms_Build.html" class="w3-bar-item w3-button">Store Room Build Out</a>
+    </div>
+  </div>
 
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
-  <!-- Social Media Links
-  <div class="w3-xlarge w3-padding-32">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
- </div>
--->
- <p>Copyright <span class="fa fa-copyright"></span> Emergency Software Systems | 2022</p>
-</footer>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Checks.html">Checks</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Scheduling.html">Scheduling</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Reports.html">Reports</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Evaluations.html">Evaluations</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="MediaLibrary.html">Media Libary</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="SystemActivies.html">System Activities</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Users.html">Users</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Premissions.html">User Premissions</a>
+  <a class="w3-bar-item w3-button w3-hover-blue" href="Help.html">Help</a>
+  <a class="w3-bar-item w3-hide-large w3-button w3-hover-blue w3-green" href="UserAccount.html">User Account</a>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main w3-padding-top-24 w3-padding-64" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-32">
+    <div class="w3-center w3-border w3-margin w3-container">
+      <h1 class="w3-text-blue">Build Out</h1>
+      <p class="w3-large">Build Out Stations, Apparatus, Equipment and Store Rooms</p>
+    </div>
+  </div>
+
+  <!--Station Modal-->
+  <div id="StationModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-green"> 
+        <span onclick="document.getElementById('StationModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Station Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Station Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Station Location</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>No. Of Bays</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Dated Built</b></label>
+        <input class="w3-input w3-border" type="date">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Station Photo Upload: </b></label><br>
+          <input class="w3-button" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
+        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+  <!--Apparatus Modal-->
+  <div id="ApparatusModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-red">
+        <span onclick="document.getElementById('ApparatusModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Apparatus Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Apparatus Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Assigned Station</b></label>
+        <select class="w3-select w3-border" name="" id="" name="stationOption">
+          <option value="Station1">Station 1</option>
+          <option value="Station2">Station 2</option>
+          <option value="Station3">Station 3</option>
+        </select>
+
+        <label><b>VIN Number</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Make</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Model</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Year</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Purchase Date</b></label>
+        <input class="w3-input w3-border" type="date">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Apparatus Photo Upload: </b></label><br>
+          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
+        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+  <!--Equipment Modal-->
+  <div id="EquipmentModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-blue">
+        <span onclick="document.getElementById('EquipmentModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Equipment Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Equipment Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Assigned Store Room</b></label>
+        <select class="w3-select w3-border" name="" id="" name="stationOption">
+          <option value="Station1">Station 1</option>
+          <option value="Station2">Station 2</option>
+          <option value="Station3">Station 3</option>
+        </select>
+
+        <label><b>Assigned Apparatus</b></label>
+        <select class="w3-select w3-border" name="" id="" name="stationOption">
+          <option value="Station1">Station 1</option>
+          <option value="Station2">Station 2</option>
+          <option value="Station3">Station 3</option>
+        </select>
+
+        <label><b>Make</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Model</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Purchase Date</b></label>
+        <input class="w3-input w3-border" type="date">
+
+        <label><b>QR Code</b></label>
+        <input class="w3-input w3-border" type="text">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Apparatus Photo Upload: </b></label><br>
+          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
+        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+  <!--Store Room Modal-->
+  <div id="StoreroomModal" class="w3-modal">
+    <div class="w3-modal-content">
+      <header class="w3-container w3-center w3-orange">
+        <span onclick="document.getElementById('StoreroomModal').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Store Room Build Out</h2>
+      </header>
+
+      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
+        <label><b>Store Room Name</b></label>
+        <input class="w3-input w3-border" type="text">
+
+        <label><b>Assigned Station</b></label>
+        <select class="w3-select w3-border" name="" id="" name="stationOption">
+          <option value="Station1">Station 1</option>
+          <option value="Station2">Station 2</option>
+          <option value="Station3">Station 3</option>
+        </select>
+
+        <label><b>Inventory Date</b></label>
+        <input class="w3-input w3-border" type="date">
+      </div>
+
+      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
+        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
+          <label><b>Apparatus Photo Upload: </b></label><br>
+          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
+        </form> 
+      </div>
+
+      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
+        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
+        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
+      </footer>
+    </div>
+  </div>
+
+
+  <div class="w3-container w3-center w3-padding-24">
+    <button onclick="document.getElementById('StationModal').style.display='block'" class="w3-button w3-green w3-padding-16">Station Build Out</button>
+    <button onclick="document.getElementById('ApparatusModal').style.display='block'" class="w3-button w3-red w3-padding-16">Apparatus Build Out</button>
+    <button onclick="document.getElementById('EquipmentModal').style.display='block'" class="w3-button w3-blue w3-padding-16">Equipment Build Out</button>
+    <button onclick="document.getElementById('StoreroomModal').style.display='block'" class="w3-button w3-orange w3-padding-16">Store Room Build Out</button>
+  </div>
+
+  <!--Top Row Build out-->
+  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
+    <div class="w3-half w3-margin-bottom w3-cell">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-green">
+          <p class="w3-xlarge">Stations</p>
+           <input class="w3-input" type="text" placeholder="Search">
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 1<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 2<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 3<input class="w3-radio w3-margin-left" name="StationRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-light-gray w3-padding-16">
+          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="w3-half w3-margin-bottom w3-cell">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-red">
+          <p class="w3-xlarge">Apparatus</p>
+          <input class="w3-input" type="text" placeholder="Search">
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Engine 1<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Engine 2<input class="w3-radio w3-margin-left" name="ApparatusRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-light-gray w3-padding-16">
+          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<!--Bottom Row Build Out-->
+  <div class="w3-row-padding w3-padding-16" id="BuildOutLists">
+    <div class="w3-half w3-margin-bottom w3-cell">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-blue">
+          <p class="w3-xlarge">Equipment</p>
+          <input class="w3-input" type="text" placeholder="Search">
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Flash Lights<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Cordless Drill<input class="w3-radio w3-margin-left" name="EquipmentRadioButtons" type="radio"></h1>
+        </li>
+  
+        <li class="w3-light-gray w3-padding-16">
+          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half w3-margin-bottom w3-cell">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-orange">
+          <p class="w3-xlarge">Store Rooms</p>
+          <input class="w3-input" type="text" placeholder="Search">
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 1 West Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+        </li>
+
+        <li class="w3-padding">
+          <h1 class="w3-medium">Station 2 East Store Room<input class="w3-radio w3-margin-left" name="StoreRoomRadioButtons" type="radio"></h1>
+        </li>
+  
+        <li class="w3-light-gray w3-padding-16">
+          <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Update</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="w3-container w3-bottom w3-dark-gray">
+      <p>Copyright <span class="fa fa-copyright"></span> Emergency Software Systems | 2022</p>
+    </div>
+
+<!-- END MAIN -->
+</div>
 
 <script>
-// Used to toggle the menu on small screens when clicking on the menu button
+//User Account drop down button
 function myFunction() {
-  var x = document.getElementById("navDemo");
+  var x = document.getElementById("UserAccount");
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
   } else { 
@@ -196,24 +402,75 @@ function myFunction() {
   }
 }
 
-//Get the button
-var mybutton = document.getElementById("myBtn");
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
 
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    mybutton.style.display = "block";
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
   } else {
-    mybutton.style.display = "none";
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+
+function StationDropDown() {
+  var x = document.getElementById("Station");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function ApparatusDropDown() {
+  var x = document.getElementById("Apparatus");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function EquipmentDropDown() {
+  var x = document.getElementById("Equipment");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
+}
+
+function StoreRoomDropDown() {
+  var x = document.getElementById("StoreRoom");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-blue";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className = 
+    x.previousElementSibling.className.replace(" w3-blue", "");
+  }
 }
 
 </script>
