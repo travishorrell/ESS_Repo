@@ -59,12 +59,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
   </div>
 
   <div class="w3-dropdown-click">
-    <button class="w3-hover-blue w3-button" onclick="EquipmentDropDown()">
+    <button class="w3-hover-blue w3-red w3-button" onclick="EquipmentDropDown()">
       Equipment<i class="fa fa-caret-down"></i>
     </button>
     <div id="Equipment" class="w3-dropdown-content w3-bar-block w3-white w3-card">
       <a href="Equipment.html" class="w3-bar-item w3-button">View Equipment</a>
-      <a href="Equipment_build.html" class="w3-bar-item w3-button">Equipment Build Out</a>
+      <a href="Equipment_build.html" class="w3-bar-item w3-red w3-button">Equipment Build Out</a>
     </div>
   </div>
 
@@ -98,95 +98,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
 
   <div class="w3-row w3-padding-32">
     <div class="w3-center w3-border w3-margin w3-container">
-      <h1 class="w3-text-blue">Build Out</h1>
-      <p class="w3-large">Build Out Stations, Apparatus, Equipment and Store Rooms</p>
-    </div>
-  </div>
-
-  <!--Station Modal-->
-  <div id="StationModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-green"> 
-        <span onclick="document.getElementById('StationModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Station Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Station Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Station Location</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>No. Of Bays</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Dated Built</b></label>
-        <input class="w3-input w3-border" type="date">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Station Photo Upload: </b></label><br>
-          <input class="w3-button" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
-    </div>
-  </div>
-
-  <!--Apparatus Modal-->
-  <div id="ApparatusModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-red">
-        <span onclick="document.getElementById('ApparatusModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Apparatus Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Apparatus Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Assigned Station</b></label>
-        <select class="w3-select w3-border" name="" id="" name="stationOption">
-          <option value="Station1">Station 1</option>
-          <option value="Station2">Station 2</option>
-          <option value="Station3">Station 3</option>
-        </select>
-
-        <label><b>VIN Number</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Make</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Model</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Year</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Purchase Date</b></label>
-        <input class="w3-input w3-border" type="date">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Apparatus Photo Upload: </b></label><br>
-          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
+      <h1 class="w3-text-blue">Equipment Build Out</h1>
     </div>
   </div>
 
@@ -244,50 +156,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
     </div>
   </div>
 
-  <!--Store Room Modal-->
-  <div id="StoreroomModal" class="w3-modal">
-    <div class="w3-modal-content">
-      <header class="w3-container w3-center w3-orange">
-        <span onclick="document.getElementById('StoreroomModal').style.display='none'" 
-        class="w3-button w3-display-topright">&times;</span>
-        <h2>Store Room Build Out</h2>
-      </header>
-
-      <div class="w3-container w3-padding w3-cell w3-half w3-margin-bottom">
-        <label><b>Store Room Name</b></label>
-        <input class="w3-input w3-border" type="text">
-
-        <label><b>Assigned Station</b></label>
-        <select class="w3-select w3-border" name="" id="" name="stationOption">
-          <option value="Station1">Station 1</option>
-          <option value="Station2">Station 2</option>
-          <option value="Station3">Station 3</option>
-        </select>
-
-        <label><b>Inventory Date</b></label>
-        <input class="w3-input w3-border" type="date">
-      </div>
-
-      <div class="w3-container w3-padding w3-center w3-cell w3-half w3-margin-bottom">
-        <form class="w3-cell-bottom w3-padding" action="" method="post" enctype="multipart/form-data">
-          <label><b>Apparatus Photo Upload: </b></label><br>
-          <input class="w3-button w3-margin" type="file" name="fileToUpload" id="fileToUpload">
-        </form> 
-      </div>
-
-      <footer class="w3-container w3-center w3-padding-16 w3-light-gray">
-        <button class="w3-button w3-white w3-border w3-border-green w3-round-large">Save</button>
-        <button class="w3-button w3-white w3-border w3-border-red w3-round-large">Clear</button>
-      </footer>
-    </div>
-  </div>
-
-
   <div class="w3-container w3-center w3-padding-24">
-    <button onclick="document.getElementById('StationModal').style.display='block'" class="w3-button w3-green w3-padding-16">Station Build Out</button>
-    <button onclick="document.getElementById('ApparatusModal').style.display='block'" class="w3-button w3-red w3-padding-16">Apparatus Build Out</button>
     <button onclick="document.getElementById('EquipmentModal').style.display='block'" class="w3-button w3-blue w3-padding-16">Equipment Build Out</button>
-    <button onclick="document.getElementById('StoreroomModal').style.display='block'" class="w3-button w3-orange w3-padding-16">Store Room Build Out</button>
   </div>
 
   <!--Top Row Build out-->
